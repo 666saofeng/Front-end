@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+.accordin{
+    border: 1px solid black;
+    width: 30rem;
+}
+.topic{
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+    width: 100%;
+}
+.topic__indicator{
+    width:1ch;
+    height: 1ch;
+    border-bottom: 1px solid blue;
+    border-right: 1px solid blue;
+    rotate: 45deg;
+}
+.topic-open .topic__indicator{
+    rotate: 225deg;
+}
+.answer{
+    display: none;
+}
+.topic-open+.answer{
+    display: initial;
+}
