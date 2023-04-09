@@ -1,0 +1,12 @@
+.cats{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.cats-card{
+    grid-column: span 12;
+}
+@media screen and (min-width: 44rem) {
+    .cats-card{
+        grid-column: span 4;
+    }
+}

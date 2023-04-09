@@ -1,0 +1,23 @@
+.app{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+}
+.header{
+  grid-area: header;
+}
+.main{
+  grid-area: main;
+  background-color: aqua;
+}
+.footer{
+  grid-area: footer;
+  background-color: skyblue;
+}

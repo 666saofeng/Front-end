@@ -1,0 +1,20 @@
+.board{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.board-title{
+    grid-column: 5/8;
+}
+.board-button{
+    grid-column: 5/8;
+}
+
+@media screen and (min-width: 44rem) {
+    .board-title{
+        grid-column: 4/6;
+    }
+    .board-button{
+        grid-column: 8/10;
+    }
+}

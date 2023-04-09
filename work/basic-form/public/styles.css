@@ -1,0 +1,144 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    min-height: 100vh;
+    padding:0;
+    margin: 0;
+}
+
+#root{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer";
+    height: 100%; 
+    min-height: 100vh; 
+}
+
+.header{
+    grid-area: header;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    
+}
+.header_title{
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.main{
+    grid-area: main;
+    background-color: whitesmoke;
+}
+.main_form{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0;
+    padding: 0.5rem;
+    align-items: center;
+}
+.main_form_title{
+    grid-column: span 12;
+    text-align: center;
+    color: red;
+}
+.main_form_label {
+    grid-column: span 2;
+    margin: 1rem;
+}
+input{
+    grid-column: span 12;
+    margin: 1rem ;
+}
+.main_form_button{
+    margin: 1rem;
+}
+#annoy_me{
+    grid-column: span 2;
+}
+#annoy_me_label{
+    grid-column: 3/12;
+    margin: 1rem;
+}
+.main_form_select{
+    grid-column: 4/10;
+    margin: 1rem;
+}
+.main_form_require{
+    grid-column: 3/3;
+}
+input:required{
+    border: 1px solid blue;
+}
+/* input:invalid{
+    border: 1px solid red;
+} */
+select:required{
+    border: 1px solid blue;
+    cursor: pointer;
+}
+button{
+    grid-column: span 12;
+    cursor: pointer;
+}
+.footer{
+    grid-area: footer;
+    background-color: aquamarine;
+}
+@media screen and (min-width: 50rem) {
+    #root{
+        height: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+        background-color: aquamarine;
+    }
+    .main_form{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0;
+        align-items: center;
+    }
+    .main_form_label {
+        grid-column: 3/5;
+        margin: 1rem;
+    }
+    input{
+        grid-column: 5/12;
+        margin: 0;
+    }
+    .main_form_button{
+        margin: 1rem;
+    }
+    #annoy_me{
+        grid-column: 5/5;
+    }
+    #annoy_me_label{
+        grid-column: 6/12;
+    }
+    .main_form_select{
+        grid-column: 5/12;
+        margin: 1rem 0;
+    }
+    input:required{
+        border: 1px solid blue;
+    }
+    .main_form_require{
+        grid-column: 4/4;
+    }
+
+}

@@ -19,7 +19,7 @@ function GlobalNav({ className,onNav }) {
   });
 
   const menuHtml =(
-    <nav className={"global-nav ${className}"}>
+    <nav className={`global-nav ${className}`}>
     <ul className="global-nav__list">{list}</ul>
   </nav>
   );

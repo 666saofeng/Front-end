@@ -1,0 +1,64 @@
+.main{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_header{
+    text-align: center;
+}
+.main_form{
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.main_form_label {
+    grid-column: span 2;
+    margin: 1rem;
+}
+.main_form_input{
+    grid-column: span 12;
+    margin: 1rem ;
+}
+.main_form_button{
+    margin: 1rem;
+}
+#annoy_me{
+    grid-column: span 2;
+}
+#annoy_me_label{
+    grid-column: 3/12;
+    margin: 1rem;
+}
+.main_form_select{
+    grid-column: 4/10;
+    margin: 1rem;
+}
+.main_form_require{
+    grid-column: 3/3;
+}
+input:required{
+    border: 1px solid blue;
+}
+/* input:invalid{
+    border: 1px solid red;
+} */
+select:required{
+    border: 1px solid blue;
+    cursor: pointer;
+    
+}
+button{
+    grid-column: span 12;
+    cursor: pointer;
+}
+
+@media screen and (min-width:45rem) {
+    .main_form_input{
+       grid-column: span 10;
+    }
+}

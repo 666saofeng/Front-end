@@ -1,0 +1,143 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+html,body{
+    font-family: sans-serif;
+    height: 100%;
+    min-height: 100vh;
+    /* padding:0; */
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    min-height: 100vh; 
+    min-width: 360px;
+    max-width: 1000px;
+}
+.header{
+    background-color:rgb(230,150,140) ;
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.register{
+    display: grid;
+    grid-template-rows: 2fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "register-name"
+    "register-email"
+    "register-confirm"
+    "register__label-checkbox"
+    "register__tier"
+    "register__submit"; 
+    align-content: left;
+    margin: 1rem;
+}
+.register-name{
+    display: flex;
+    flex-direction: column;
+}
+.register-email{
+    display: flex;
+    flex-direction: column;
+}
+.register-confirm{
+    display: flex;
+    flex-direction: column;
+}
+.register-name__error{
+    display: initial;
+}
+.register-name__error{
+    color: red;
+    display: none;
+}
+.register-name--invalid .register-name__error{
+    display: initial;
+}
+.register-email__error:empty{
+    display: none;
+}
+.register-email__error{
+    display: initial;
+    color: red;
+}
+.register-confirm__error:empty{
+    display: none;
+}
+.register-confirm__error{
+    display: initial;
+    color: red;
+}
+.footer{
+    grid-area: footer;
+    background-color: black;
+    color: whitesmoke;
+    height: 1rem;
+}
+.footer__link{
+    text-decoration: none;
+    color: whitesmoke;
+}
+@media screen and (min-width:40rem) {
+    html,body{
+        min-width: 360px;
+    }
+    .register-name{
+        height: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        margin: 0;
+        padding: 0;
+    }
+    .register__name-label{
+        grid-column: 2/5;
+    }
+    .register-name__input{
+        grid-column: 6/12;
+    }
+    .register-name__error{
+        grid-column: 6/9;
+    }
+    .register-email{
+        height: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        margin: 0;
+        padding: 0;
+    }
+    .register__email-label{
+        grid-column: 2/5;
+    }
+    .register-email__error{
+        grid-column: 6/9;
+    }
+    .register-email__input{
+        grid-column: 6/12;
+    }
+    .register-confirm{
+        height: 1rem;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        margin: 0;
+        padding: 0;
+    }
+    .register__confirm-label{
+        grid-column: 2/5;
+    }
+    .register-confirm__input{
+        grid-column: 6/12;
+    }
+    .register-confirm__error{
+        grid-column: 6/12;
+    }
+    .register__label-checkbox{
+        text-align: center;
+    }
+    
+}

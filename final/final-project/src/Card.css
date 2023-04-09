@@ -1,0 +1,21 @@
+.card{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+.card-pic{
+    width: 100%;
+    /* aspect-ratio: 1/1; */
+}
+.card-title{
+    text-align: center;
+}
+.card-button{
+    width: 5rem;
+    align-items: center;
+    text-align: center;
+}

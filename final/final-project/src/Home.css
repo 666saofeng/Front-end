@@ -1,0 +1,24 @@
+.home{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    
+}
+.home-text{
+    grid-column: 5/10;
+    padding: 0.5rem;
+}
+.home-button{
+    grid-column: 6/8;
+    padding: 0.5rem
+}
+
+@media screen and (min-width:44rem){
+    .home-text{
+        grid-column: 4/8;
+       }
+       .home-button{
+           grid-column: 10/12;
+       }
+}
+
+

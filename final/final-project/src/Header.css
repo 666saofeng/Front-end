@@ -1,0 +1,25 @@
+.header{
+    display: grid;
+    flex-direction: column;
+    /* background-color: red; */
+}
+.header-background{
+    opacity: 0.8;
+    width: 100%;
+    aspect-ratio: 4/1   ;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    justify-content: space-evenly;
+}
+.header-content-title{
+    padding-left: 2rem;
+}
+.header-pic{
+    width: 8rem;
+    height: 8 rem;
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+}

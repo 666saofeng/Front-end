@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>basic-form</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="root">
+        <header class="header">
+            <h1 class="header_title">Register form</h1>
+        </header>
+        <main class="main">
+            <form action="/some/url" method="POST" class="main_form">
+                <h2 class="main_form_title">* are required</h2>
+               <!-- <span class="form__itme__name"> -->
+                <label for="name" class="main_form_label" >*Name:</label> 
+                <input class="main_form_input" name="name" id="name" required title="Please input your name" placeholder="John Smith">
+               <!-- </span> -->
+               <!-- <span class="form__item__email"> -->
+                <label for="email" class="main_form_label">*Email:</label>    
+                <input class="main_form_input" type="email" name="email" id="email" required placeholder="john@gmail.com">
+               <!-- </span> -->
+               <!-- <span class="form__item__checkbox"> -->
+                <input type="checkbox" name="annoy_me" id="annoy_me" checked>
+                <label for="annoy_me" id="annoy_me_label">Do you want us to send you annoying emails?</label>
+               <!-- <span class="form__item__tier"> -->
+                <span class="main_form_require">*</span>
+                <select name="tier" id="tier" class="main_form_select" required>
+                    <option value="">--Please select--</option>
+                    <option value="1">Silver Tier</option>
+                    <option value="2">Gold  Tier</option>
+                    <option value="3">Platinum Tier</option>
+                </select>
+            <!-- </span> -->
+               <!-- </span> -->
+               <button type="submit" class="main_form_button">Register</button>
+            </form>
+        </main>
+
+       <footer class="footer">
+           <a href="#" class="footer__link"> Privacy Policy </a>     
+       </footer>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,13 @@
+.libray{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.libray-card{
+    grid-column: span 12;
+}
+
+@media screen and (min-width: 44rem) {
+    .libray-card{
+        grid-column: span 4;
+    }
+}

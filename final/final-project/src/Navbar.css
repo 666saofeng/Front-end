@@ -1,0 +1,33 @@
+/* .navbar-list{
+    /* display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+} */
+.navbar-menu_item{
+    list-style: none;
+    padding: 0;
+}
+.nav-button{
+    height:3rem;
+    right: 0%;
+}
+.navbar-menu_item{
+    position: relative;
+}
+
+.navbar-list{
+    list-style: none;
+    padding: 0;
+    margin:0;
+    left:0;
+    right: auto;
+    position: absolute;
+    top: 3rem;
+    width: 5rem;
+    max-height: initial;
+    display: flex;
+    flex-direction: column;
+}
+

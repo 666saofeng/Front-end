@@ -1,0 +1,112 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    background-color: #037171;
+    min-height: 100vh;
+    min-width: 360px;
+    max-width: 1000px;
+}
+body{
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto  1fr auto;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    margin: 0;
+    font-family: sans-serif;
+    min-width: 360px;
+}
+.header{
+    background-color: #def4c6;
+    grid-area: header;
+    grid-column: span 12;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+    "logo title"
+    "nav nav";
+}
+/* .header_link{
+    cursor: pointer;            
+} */
+.header_logo {
+    grid-area: logo;
+    align-self: flex-start;
+    grid-column: span 2;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+/* img{
+    width: 100%;
+    height: 100%;
+} */
+.header_title{
+    grid-area: title;
+    grid-column: 4/10;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+.header_nav{
+    grid-area: nav;
+    grid-column: 6/8;
+}
+
+.nav_menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+.menu_button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: inherit;
+    font-size: inherit;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+.dropdown_menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #def4c6;
+}
+.menu_item{
+    margin: 0.25rem;
+}
+.nav_menu_item:hover .dropdown_menu,
+.nav_menu_item:focus-within .dropdown_menu{
+    max-height: initial;
+}
+.main{
+    grid-area: main;
+    background-color: #037171;
+    grid-column: span 12;
+    /* background-color: #DEF4C6; */
+    /* color: whitesmoke; */
+}
+.footer{
+    grid-area: footer;
+    grid-column: span 12;
+    background-color: #def4c6;
+}
